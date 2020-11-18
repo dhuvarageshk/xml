@@ -1,0 +1,209 @@
+<!doctype html>
+<html ng-app="Supermarket-Management-System">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+ <body style= "font-color:'white' "></body><b>
+ <div style="background-color:	#A9A9A9">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-10col-lg-offset-1">
+                <center><h1><b>DI Super Market Management System</b></h1></center><br>
+                <h2 class="section-heading"><b>Stock List</b></h2>
+                <table class="stocktable" ng-controller="StockController as stockCtrl">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>ExpireDate</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input class="form-control" ng-model="stockCtrl.stock.product">
+                            </td>
+                            <td>
+                                 <input class="form-control" ng-model="stockCtrl.stock.expiryDate"type="date">
+                            </td>
+                            <td>
+                                <input class="form-control" ng-model="stockCtrl.stock.quantity">
+                            </td>
+                            <td>
+                                <button class="btn btn-primary" ng-click="stockCtrl.postStock()">Add Stock</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody ng-repeat="stock in stockCtrl.stockList | orderBy:'date' track by stock._id">
+                        <tr>
+                            <td>{{stock.product}}</td>
+                            <td>{{stock.expiryDate | date:'mediumDate'}}</td>
+                            <td>{{stock.quantity}}</td>
+
+                            <td>
+                                <button class="btn btn-danger" ng-click="stockCtrl.deleteStock(stock)">Remove</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-warning" ng-click="stockCtrl.addStock(stock)">+</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-warning" ng-click="stockCtrl.minusStock(stock)">-</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br><br>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/Supermarket-Management-System.js"></script>
+<script src="js/stock.js"></script>
+<script src="js/volunteer.js"></script><br><br>
+
+
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2 class="section-heading"><b>Staffs check in/check out</b></h2>
+                <table class="volunteertable" ng-controller="VolunteerController as volunteerCtrl">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input class="form-control" ng-model="volunteerCtrl.volunteer.name">
+                            </td>
+                            <td>
+                                <input class="form-control" type="time" ng-model="volunteerCtrl.volunteer.monday.start" placeholder="HH:mm" min="08:00" max="17:00" required />
+                            </td>
+                            <td>
+                                <input class="form-control" type="time" ng-model="volunteerCtrl.volunteer.tuesday.start" placeholder="HH:mm" min="08:00" max="17:00" required />
+                            </td>
+                            <td>
+                                <input class="form-control" type="time" ng-model="volunteerCtrl.volunteer.wednesday.start" placeholder="HH:mm" min="08:00" max="17:00" required />
+                            </td>
+                            <td>
+                                <input class="form-control" type="time" ng-model="volunteerCtrl.volunteer.thursday.start" placeholder="HH:mm" min="08:00" max="17:00" required />
+                            </td>
+                            <td>
+                                <input class="form-control" type="time" ng-model="volunteerCtrl.volunteer.friday.start" placeholder="HH:mm" min="08:00" max="17:00" required />
+                            </td>
+                            <td>
+                                <input class="form-control" type="time" ng-model="volunteerCtrl.volunteer.saturday.start" placeholder="HH:mm" min="08:00" max="17:00" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="btn btn-primary" ng-click="volunteerCtrl.postVolunteer()">Add Staff</button>
+                            </td>
+                            <td>
+                                <input class="form-control" type="time" ng-model="volunteerCtrl.volunteer.monday.end" placeholder="HH:mm" min="08:00" max="17:00" required />
+                            </td>
+                            <td>
+                                <input class="form-control" type="time" ng-model="volunteerCtrl.volunteer.tuesday.end" placeholder="HH:mm" min="08:00" max="17:00" required />
+                            </td>
+                            <td>
+                                <input class="form-control" type="time" ng-model="volunteerCtrl.volunteer.wednesday.end" placeholder="HH:mm" min="08:00" max="17:00" required />
+                            </td>
+                            <td>
+                                <input class="form-control" type="time" ng-model="volunteerCtrl.volunteer.thursday.end" placeholder="HH:mm" min="08:00" max="17:00" required />
+                            </td>
+                            <td>
+                                <input class="form-control" type="time" ng-model="volunteerCtrl.volunteer.friday.end" placeholder="HH:mm" min="08:00" max="17:00" required />
+                            </td>
+                            <td>
+                                <input class="form-control" type="time" ng-model="volunteerCtrl.volunteer.saturday.end" placeholder="HH:mm" min="08:00" max="17:00" required />
+                            </td>
+                        </tr>
+                        <tr ng-repeat="volunteer in volunteerCtrl.volunteerList">
+                            <td>{{volunteer.name}}</td>
+                            <td>{{volunteer.monday.start | date:'shortTime'}} - {{volunteer.monday.end | date:'shortTime'}}</td>
+                            <td>{{volunteer.tuesday.start | date:'shortTime'}} - {{volunteer.tuesday.end | date:'shortTime'}}</td>
+                            <td>{{volunteer.wednesday.start | date:'shortTime'}} - {{volunteer.wednesday.end | date:'shortTime'}}</td>
+                            <td>{{volunteer.thursday.start | date:'shortTime'}} - {{volunteer.thursday.end | date:'shortTime'}}</td>
+                            <td>{{volunteer.friday.start | date:'shortTime'}} - {{volunteer.friday.end | date:'shortTime'}}</td>
+                            <td>{{volunteer.saturday.start | date:'shortTime'}} - {{volunteer.saturday.end | date:'shortTime'}}</td>
+                            <td>
+                                <button class="btn btn-danger" ng-click="volunteerCtrl.deleteVolunteer(volunteer)">Remove</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-warning" ng-click="volunteerCtrl.putVolunteer(volunteer)">Edit</button>
+                            </td>
+                        </tr>
+						
+                    </tbody>
+                </table><br><br>
+					<section id="video" class="content-section">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-heading">
+                                                    <Center>  <h1><b>Products on Offer!!!</b></h1></Center>
+                        </div>
+                        <div><center> 
+                          <p id ="product1"></p>
+                          <p id ="product2"></p>
+                          <p id ="product3"></p>
+                          <p id ="product4"></p>
+                          <p id ="product5"></p></center>
+                        </div>                
+               <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>  
+<script>
+    var text = '{"product":['+
+   '{ "name": "Horlicks", "id": "1","price": "125/kg"},'+
+   '{"name": "Chocolates","id": "2","price": "500/kg"},'+
+   '{ "name": "Rice","id": "3","price": "80/kg"},'+
+   '{"name": "Wheat", "id": "4", "price": "95/kg"},'+
+   '{ "name": "Boost", "id": "5","price": "75/kg"}]}';
+
+
+  var obj = JSON.parse(text);
+   document.getElementById("product1").innerHTML =  "<li>" + obj.product[0].name + " - " +  obj.product[0].price + "</li>" ;
+    document.getElementById("product2").innerHTML =  "<li>" + obj.product[1].name + " - " +  obj.product[1].price + "</li>" ;
+     document.getElementById("product3").innerHTML =  "<li>" + obj.product[2].name + " - " +  obj.product[2].price + "</li>" ;
+      document.getElementById("product4").innerHTML =  "<li>" + obj.product[3].name + " - " +  obj.product[3].price + "</li>" ;
+       document.getElementById("product5").innerHTML =  "<li>" + obj.product[4].name + " - " +  obj.product[4].price + "</li>" ;
+
+</script>
+<p class="text-info">
+ <section id="contact" class="content-section">
+                <div>
+                  <h2 id="demo"></h2>
+                     <h4 id="demo1"></h4>
+ </div>
+</section></p>
+<script>
+var parser, xmlDoc;
+var text = "<products><price>" +
+"<title>Contact Details :</title>" +
+"<contact>Email :dhuvaragesh:9999999999,Iqbal:8989898989 </contact>"
+"</price></products>";
+
+parser = new DOMParser();
+xmlDoc = parser.parseFromString(text,"text/xml");
+
+document.getElementById("demo").innerHTML =
+xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+document.getElementById("demo1").innerHTML =
+xmlDoc.getElementsByTagName("contact")[0].childNodes[0].nodeValue;
+</script>
+            </div>
+        </div>
+    </div>
+<br><br><br>
+
+</body><br>
+
+    
+
+</html>

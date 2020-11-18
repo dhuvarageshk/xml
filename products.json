@@ -1,0 +1,27 @@
+[
+   {
+      "name": "Horlicks",
+      "id": "1",
+      "price": "125/kg"
+   },
+   {
+      "name": "Chocolates",
+      "id": "2",
+      "price": "500/kg"
+   },
+   {
+      "name": "Rice",
+      "id": "3",
+      "price": "80/kg"
+   },
+   {
+      "name": "Wheat",
+      "id": "4",
+      "price": "95/kg"
+   },
+   {
+      "name": "Boost",
+      "id": "5",
+      "price": "75/kg"
+   }
+]

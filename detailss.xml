@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="details.xsl"?>
+<catalog>
+  <cd>
+    <title>Bala</title>
+    <wishlist>Rice</wishlist>
+    <country>India</country>
+    <district>Dindugal</district >
+    <product>3</product>
+  </cd><cd>
+      <title>Dhuvaragesh</title>
+    <wishlist>Chocolates</wishlist>
+    <country>India</country>
+    <district>Salem</district >
+    <product>2</product>
+  </cd><cd>
+      <title>Iqbal</title>
+    <wishlist>Rice</wishlist>
+    <country>India</country>
+    <district>Dindugal</district >
+    <product>3</product>
+  </cd><cd>
+      <title>Aari</title>
+    <wishlist>Chocolates</wishlist>
+    <country>India</country>
+    <district>Salem</district >
+    <product>2</product>
+  </cd><cd>
+      <title>Rio</title>
+    <wishlist>Horlicks</wishlist>
+    <country>India</country>
+    <district>Erode</district >
+    <product>1</product>
+  </cd><cd>
+      <title>Ramesh</title>
+    <wishlist>Horlicks</wishlist>
+    <country>India</country>
+    <district>Erode</district >
+    <product>1</product>
+  </cd><cd>
+  <title>Ramya</title>
+    <wishlist>Wheat</wishlist>
+    <country>India</country>
+    <district>Madurai</district >
+    <product>4</product>
+	</cd>
+	<cd>
+  <title>Gabi</title>
+    <wishlist>Wheat</wishlist>
+    <country>India</country>
+    <district>Madurai</district >
+    <product>4</product>
+	</cd>
+	<cd>
+  <title>Kavin</title>
+    <wishlist>Boost</wishlist>
+    <country>India</country>
+    <district>Coimbatore</district >
+    <product>5</product>
+	</cd>
+	<cd>
+  <title>Aajith</title>
+    <wishlist>Boost</wishlist>
+    <country>India</country>
+    <district>Coimbatore</district >
+    <product>5</product>
+	</cd>
+	
+</catalog>
+

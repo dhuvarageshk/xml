@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<?xml-stylesheet type="text/xsl" href="valuess.xsl"?> 
+<product> 
+  <s> 
+   <name> Horlicks</name> 
+   <id >1</id > 
+   <price>125/kg</price> 
+   
+  </s> 
+  <s> 
+   <name> Chocolates </name> 
+   <id >2</id > 
+   <price>500/kg</price> 
+   
+  </s> 
+  <s>  
+   <name> Rice</name> 
+   <id >3</id > 
+   <price> 80/kg</price> 
+   
+  </s> 
+  <s>  
+   <name> Wheat </name> 
+   <id >4</id > 
+   <price> 95/kg</price> 
+   
+  </s> 
+  <s>  
+   <name>Boost</name> 
+   <id >5</id > 
+   <price> 75/kg</price> 
+  
+  </s> 
+ </product> 
